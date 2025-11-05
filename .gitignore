@@ -1,0 +1,8 @@
+target/
+HELP.md
+.project
+.settings/
+.metadata/
+.mvn/
+.classpath
+.gitattributes
