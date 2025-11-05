@@ -8,3 +8,10 @@
 4. Update Student Email 
 
 This is basic prototype of crud app, which can be designed again by using solid principle. 
+
+
+
+DataBased Used: MySQL 
+DataBaseName: CrudAppDatabase
+Table :Student
+
