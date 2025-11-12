@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.crud.My_Crud_App.Entity.Student;
+import com.crud.My_Crud_App.Exception.StudentNotFoundException;
 import com.crud.My_Crud_App.Repository.studentRepo;
 
 @Service
@@ -38,9 +39,9 @@ public class studentServiceImpl implements studentService {
 	}
 
 	@Override
-	public Student findRecordById(int id) {
-		Optional<Student> s = repo.findById(id);
-		return s.get();
+	public Student findRecordById(int id) throws StudentNotFoundException {
+		return repo.findById(id).orElseThrow(
+				()-> new StudentNotFoundException(id));
 	}
 
 	@Override

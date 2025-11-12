@@ -1,8 +1,10 @@
 package com.crud.My_Crud_App.Service;
 
+
 import java.util.List;
 
 import com.crud.My_Crud_App.Entity.Student;
+import com.crud.My_Crud_App.Exception.StudentNotFoundException;
 
 public interface studentService {
 
@@ -16,7 +18,7 @@ public interface studentService {
 	String deleteRecord(int id);
 
 	// method to find the Student detail by id
-	Student findRecordById(int id);
+	Student findRecordById(int id) throws StudentNotFoundException; 
 
 	// method to give all student details
 	List<Student> findAllRecord();
